@@ -1,5 +1,5 @@
 var particles,plinko;
-var divisions,ground;
+var division,ground;
 
 function setup() {
   createCanvas(800,400);
@@ -8,7 +8,7 @@ function setup() {
 
   var particles = [];
   var plinkos = [];
-  var divisions = [];
+  var division = [];
 
 
 }
@@ -18,8 +18,9 @@ function draw() {
 
   var divisionHeight = 300;
   for(var k=0; k <width; k = k+80){
-    division.push(newDivisions(k, height - divisionHeight/2,10,divisionHeight));
+    division.push(new Division(k, height - divisionHeight/2,10,divisionHeight));
   }
 
   drawSprites();
+  
 }
